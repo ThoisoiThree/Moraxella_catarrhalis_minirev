@@ -10,9 +10,11 @@ def extract_nucleotides(seq_arr):
     for record in seq_arr:
         lines = record.split('\n')
         if len(lines) > 1:
-            seq = "".join(lines[1:]).strip()  # Убираем заголовок и объединяем строки
-            if seq:
-                sequences.append(seq)
+            header = lines[0]
+            if "[pseudo=true]" not in header:  # Игнорируем псевдогены
+                seq = "".join(lines[1:]).strip()  
+                if seq:
+                    sequences.append(seq)
     return sequences
 
 def count_nucleotides(seq_body_arr):
@@ -26,20 +28,23 @@ def count_nucleotides(seq_body_arr):
                 codons[codon] = 1
     return codons
 
-seq_in = read_sequence('/Users/thoisoithree/Desktop/minirev/data/CDS_raw.txt')
-seq_arr = extract_nucleotides(seq_in)
 
-stop_codons = ["TAA", "TAG", "TGA"]
+if __name__ == "__main__":
+    
+    seq_in = read_sequence('/Users/thoisoithree/Desktop/minirev/data/CDS_raw.txt')
+    seq_arr = extract_nucleotides(seq_in)
 
-# Тело без старт и стопа
-seqbody = [seq[3:-3] for seq in seq_arr]
+    stop_codons = ["TAA", "TAG", "TGA"]
 
-# Подсчет кодонов
-codon_dict = count_nucleotides(seqbody)
+    # Тело без старт и стопа
+    seqbody = [seq[3:-3] for seq in seq_arr]
 
-print("\n")
-for codon in stop_codons:
-    print(f"{codon}: {codon_dict[codon]}")
-print("\n")
+    # Подсчет кодонов
+    codon_dict = count_nucleotides(seqbody)
+    print(codon_dict)
+    print("\n")
+    for codon in stop_codons:
+        print(f"{codon}: {codon_dict[codon]}")
+    print("\n")
 
 
