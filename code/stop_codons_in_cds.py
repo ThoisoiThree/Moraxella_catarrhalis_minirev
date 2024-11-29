@@ -41,7 +41,7 @@ if __name__ == "__main__":
 
     # Подсчет кодонов
     codon_dict = count_nucleotides(seqbody)
-    print(codon_dict)
+    #print(codon_dict)
     print("\n")
     for codon in stop_codons:
         print(f"{codon}: {codon_dict[codon]}")
