@@ -17,7 +17,6 @@ About *Moraxella catarrhalis*:
 - Key Roles: 
   - Colonizes upper respiratory tract and middle ear.
   - Shows adaptability through horizontal gene transfer and genomic plasticity.
-  - Exhibits antibiotic resistance mechanisms, posing challenges to treatment.
 
 ------------------------------------------
 📊 What’s Inside?
