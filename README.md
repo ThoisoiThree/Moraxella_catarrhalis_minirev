@@ -2,7 +2,7 @@
 Moraxella catarrhalis Mini-Review 🦠
 ==========================================
 
-Welcome to the Moraxella catarrhalis Mini-Review repository! This project provides a compact but comprehensive genomic analysis of *Moraxella catarrhalis*, a human pathogen and third-leading cause of bacterial acute otitis media in children. Dive into the fascinating world of microbial genomics and explore the tools and scripts used for this study.
+Welcome to the Moraxella catarrhalis Mini-Review repository! This project provides a compact genomic analysis of *Moraxella catarrhalis*, a human pathogen and third-leading cause of bacterial acute otitis media in children. Dive into the fascinating world of microbial genomics and explore the tools and scripts used for this study.
 
 ------------------------------------------
 📋 Overview
